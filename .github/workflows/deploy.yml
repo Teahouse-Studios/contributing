@@ -1,0 +1,30 @@
+name: build and deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
+      - name: Install dependencies
+        run: pip install -r requirement.txt
+
+      - name: Build with mkdocs
+        run: mkdocs build
+
+      - name: Deploy to server
+        run: node deploy.js
+        env:
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          REMOTE_PWD: ${{ secrets.REMOTE_PWD }}
+          REMOTE_PATH: ${{ secrets.REMOTE_PATH }}

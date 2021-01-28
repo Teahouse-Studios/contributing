@@ -1,0 +1,48 @@
+site_name: Teahouse Studios 贡献规范
+repo_url: https://github.com/Teahouse-Studios/contributing
+repo_name: Teahouse-Studios/contributing
+theme:
+  name: material
+  font:
+    text: Source Sans Pro
+    language: zh
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - toc.integrate
+  icon:
+    repo: octicons/mark-github-16
+
+extra:
+  social:
+    - icon: material/web
+      link: https://teahou.se/
+      name: Website
+    - icon: octicons/mark-github-16
+      link: https://github.com/Teahouse-Studios/
+      name: GitHub
+    - icon: material/email
+      link: mailto:admin@teahou.se
+      name: Email us
+
+extra_css: 
+  - custom/custom.css
+
+extra_javascript:
+  - custom/custom.js
+
+markdown_extensions:
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+markdown_extensions:
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - meta
+
+copyright: Copyright &copy; 2020-2021 Teahouse Studios
