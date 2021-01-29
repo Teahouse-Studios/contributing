@@ -42,7 +42,7 @@ jobs:
 
       - name: Install
         if: steps.node-cache.outputs.cache-hit != 'true'
-        run: yarn i node-ssh --no-lockfile
+        run: yarn --no-lockfile
       
       - name: Deploy to server
         run: node deploy.js

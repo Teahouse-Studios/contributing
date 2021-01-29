@@ -1,0 +1,11 @@
+{
+    "name": "release",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+      "release": "node release.js"
+    },
+    "devDependencies": {
+      "node-ssh": "^11.1.1"
+    }
+  }
