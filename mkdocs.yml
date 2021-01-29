@@ -1,8 +1,14 @@
 site_name: Teahouse Studios 贡献规范
 repo_url: https://github.com/Teahouse-Studios/contributing
 repo_name: Teahouse-Studios/contributing
+
+nav:
+  - 首页: index.md
+
 theme:
   name: material
+  static_templates:
+    - 404.html
   font:
     text: Source Sans Pro
     language: zh
@@ -32,17 +38,52 @@ extra_css:
 extra_javascript:
   - custom/custom.js
 
-markdown_extensions:
-  - toc:
-      permalink: true
-
 plugins:
   - search
 
 markdown_extensions:
+  - toc:
+      permalink: true
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - meta
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
 
 copyright: Copyright &copy; 2020-2021 Teahouse Studios
