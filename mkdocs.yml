@@ -10,7 +10,7 @@ repo_url: https://github.com/Teahouse-Studios/contributing
 repo_name: Teahouse-Studios/contributing
 
 nav:
-  - 首页: index.md
+  - 总则: index.md
 
 theme:
   name: material
